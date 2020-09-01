@@ -1,0 +1,7 @@
+div(class="col col-lg-4 col-md-4")
+    div(class="card")
+        a(href="goods?id="+value['id'])
+            h3(class="card-title text-center") #{value.name}
+            img(class='card-images' src='images/'+value['image'])
+            p(class="text-center") #{value.cost.toFixed(2) + ' uah'}
+        button(data-id=value['id'] class="btn btn-primary" id="btn") Add to cart

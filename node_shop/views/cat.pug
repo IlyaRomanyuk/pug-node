@@ -1,0 +1,14 @@
+include header.pug
+div(class="wrap")
+    div(class="content")
+        header(class="header-site")
+            include header-site.pug
+
+        div(class="container")
+            div(class="row")
+                div(class='col col-lg-12')
+                    h2(class="category-title") #{category[0]['category']}
+                each value, index in elements
+                    include card.pug
+        include nav.pug
+    include footer.pug

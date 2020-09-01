@@ -1,0 +1,16 @@
+include header.pug
+div(class="wrap")
+    div(class="content")
+        header(class="header-site")
+            include header-site.pug
+
+        div(class="container")
+                each value2, index2 in category
+                    p #{value2['category']}
+                    p #{value2['description']}
+                    div(class="row")
+                        each value, index in elements
+                            if value2['id'] == value['category']
+                                include card.pug
+    include nav.pug
+include footer.pug

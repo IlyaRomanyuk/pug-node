@@ -1,0 +1,7 @@
+include header.pug
+h2 Все элементы
+each value, index in elements
+    p #{value.name}
+    img(
+        src='images/' + value['image']
+    )
